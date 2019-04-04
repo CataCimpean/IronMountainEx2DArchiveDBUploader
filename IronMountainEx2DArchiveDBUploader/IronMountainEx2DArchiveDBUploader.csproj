@@ -51,12 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AccessBLL.cs" />
     <Compile Include="Controller\AccessDBController.cs" />
     <Compile Include="Controller\ArchiveController.cs" />
     <Compile Include="Controller\AppController.cs" />
     <Compile Include="Controller\MetaDataInfoController.cs" />
     <Compile Include="DAL\AccessDAL.cs" />
-    <Compile Include="DTO\MetadataDTO.CS" />
+    <Compile Include="DTO\MetadataDTO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

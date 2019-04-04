@@ -49,6 +49,5 @@ namespace IronMountainEx2DArchiveDBUploader.Controller
                 }
             } catch (Exception ex) { throw ex; };
         }
-
     }
 }

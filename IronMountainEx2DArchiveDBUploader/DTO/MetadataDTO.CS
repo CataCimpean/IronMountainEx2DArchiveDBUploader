@@ -7,7 +7,5 @@ namespace IronMountainEx2DArchiveDBUploader.DTO
         public double ID {get;set;}
         public DateTime CreationDate { get; set; }
         public string ImageRoute { get; set; }
-
-
     }
 }

@@ -3,15 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronMountainEx2DArchiveDBUploader.Utils.Parser
 {
     public class ParserUtil
     {
-
         public static List<MetadataDTO> ParseMetaContent(string filePath,string delimter)
         {
             try
@@ -27,7 +23,7 @@ namespace IronMountainEx2DArchiveDBUploader.Utils.Parser
 
                         while ((line = sr.ReadLine()) != null && line!=string.Empty)
                         {
-                            //skip first line from .meta (because header)
+                            //skip first line from .meta (because is header)
                             if (++index == 0) { index++; continue; }
 
                             //obtain elements when split current line by delimiter.

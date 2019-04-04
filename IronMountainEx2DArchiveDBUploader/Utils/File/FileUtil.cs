@@ -1,9 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Text;
+
 namespace IronMountainEx2DArchiveDBUploader.Utils
 {
     public class FileUtil
