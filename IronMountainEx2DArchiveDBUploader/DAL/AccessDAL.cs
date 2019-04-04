@@ -13,7 +13,6 @@ namespace IronMountainEx2DArchiveDBUploader.DAL
             using (OleDbConnection connection = new OleDbConnection(GetConnDB()))
             {
                 OleDbCommand command = new OleDbCommand();
-                // Set the Connection to the new OleDbConnection.
                 command.Connection = connection;
                 try
                 {
@@ -29,14 +28,13 @@ namespace IronMountainEx2DArchiveDBUploader.DAL
                             command.Parameters.Add(new OleDbParameter("ID", metadataObj.ID));
                             command.Parameters.Add(new OleDbParameter("CreationDate", metadataObj.CreationDate));
                             command.Parameters.Add(new OleDbParameter("ImageRoute", metadataObj.ImageRoute));
-
                             command.ExecuteNonQuery();
                         }
                     }
                 }
                 catch (OleDbException ex)
                 {
-                    //try to insert duplicate key
+                    //Error when try to insert duplicate key
                     if (ex.ErrorCode == -2147467259)
                     {
                         throw new Exception("Cannot insert duplicate key.. Please change ID in .meta file ");
