@@ -9,7 +9,6 @@ namespace IronMountainEx2DArchiveDBUploader.Controller
     public class ArchiveController
     {
         public Form1 form1;
-
         private string archivePath;
         private string archiveName;
         private string dataExtractedPath;
@@ -21,7 +20,6 @@ namespace IronMountainEx2DArchiveDBUploader.Controller
 
         public void ExtractFiles()
         {
-
             try
             {
                  archivePath = form1.archivePath;

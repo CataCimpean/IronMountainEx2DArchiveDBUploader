@@ -15,6 +15,9 @@ namespace IronMountainEx2DArchiveDBUploader.Controller
             this.form1 = form1;
         }
 
+        /// <summary>
+        /// This method call ArchiveController which extract data from specific archive file
+        /// </summary>
         public void StartExtractDataFromArchive()
         {
             try
@@ -28,6 +31,11 @@ namespace IronMountainEx2DArchiveDBUploader.Controller
             }
         }
 
+        /// <summary>
+        /// This method call controller which insert records in DB based on List of objects
+        /// </summary>
+        /// <param name="form1"></param>
+        /// <param name="listMetadata"></param>
         public void StartLoadDataInAccessDB(Form1 form1,List<MetadataDTO> listMetadata)
         {
             try
@@ -42,6 +50,9 @@ namespace IronMountainEx2DArchiveDBUploader.Controller
             }
         }
 
+        /// <summary>
+        ///  This method call controller which parse content from .meta file
+        /// </summary>
         public void StartParseMetaDataInfo()
         {
             try

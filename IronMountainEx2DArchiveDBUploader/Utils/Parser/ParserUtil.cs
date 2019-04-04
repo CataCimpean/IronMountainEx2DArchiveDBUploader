@@ -8,6 +8,12 @@ namespace IronMountainEx2DArchiveDBUploader.Utils.Parser
 {
     public class ParserUtil
     {
+        /// <summary>
+        /// Method used for translate content of .meta file into List of MedatadaDTO objects
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="delimter"></param>
+        /// <returns></returns>
         public static List<MetadataDTO> ParseMetaContent(string filePath,string delimter)
         {
             try
@@ -29,6 +35,7 @@ namespace IronMountainEx2DArchiveDBUploader.Utils.Parser
                             //obtain elements when split current line by delimiter.
                             string[] elements = line.Split(new[] { delimter }, StringSplitOptions.RemoveEmptyEntries);
 
+                            //add new element MetadataDTO to list
                             listMetadata.Add(new MetadataDTO
                             {
                                 ID = Convert.ToDouble(elements[0]),

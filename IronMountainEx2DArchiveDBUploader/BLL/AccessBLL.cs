@@ -9,9 +9,11 @@ namespace IronMountainEx2DArchiveDBUploader.BLL
     {
         public static void InsertDataDB(List<MetadataDTO> metadataList)
         {
-            try {
+            try
+            {
                 AccessDAL.InsertDataDB(metadataList);
-            }catch(Exception ex) { throw ex; };
+            }
+            catch (Exception ex) { throw ex; };
         }
     }
 }
