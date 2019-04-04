@@ -25,12 +25,11 @@ namespace IronMountainEx2DArchiveDBUploader.Utils.Parser
                     using (StreamReader sr = File.OpenText(filePath))
                     {
                         string line;
-                        int index = -1;
-
+                        int index = 0;
                         while ((line = sr.ReadLine()) != null && line!=string.Empty)
                         {
                             //skip first line from .meta (because is header)
-                            if (++index == 0) { index++; continue; }
+                            if (index == 0) { index++; continue; }
 
                             //obtain elements when split current line by delimiter.
                             string[] elements = line.Split(new[] { delimter }, StringSplitOptions.RemoveEmptyEntries);
